@@ -99,6 +99,49 @@
    </main>
 
 
+   <!-- modal design -->
+    <!-- Open the modal using ID.showModal() method -->
+<button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle ">
+  <div class="modal-box space-y-6 relative">
+    <header class="space-y-3">
+    <h3  class="text-[24px] font-bold">Fix broken image uploads</h3>
+    <div class="flex items-center gap-2">
+        <div class="bg-green-500 rounded-xl w-[50px] h-6 text-[12px] text-white flex items-center justify-center font-medium">opened</div>
+        <p class="flex items-center justify-center"><div class="bg-[#64748B] w-[5px] h-[5px] rounded-full"></div><p class="text-[#64748B]">Opened by Fahim Ahmed</p></p>
+        <p><div class="bg-[#64748B] w-[5px] h-[5px] rounded-full"></div><p class="text-[#64748B]">22/02/2026</p></p>
+    </div>
+     </header>
+    
+     <main class="space-y-3">
+      <div>
+        <div class="btn btn-xs btn-outline text-[#00A96E] bg-[#BBF7D0] rounded-xl">bug</div>
+        
+      </div>
+      <p class="text-[16px] font-normal text-[#64748B]">The navigation menu doesn't collapse properly on mobile devices. Need to fix the responsive behavior.</p>
+     </main>
+
+     <footer class="space-y-3 bg-[#F8FAFC] flex items-center p-3 gap-32">
+        <div>
+            <p class="text-[16px] font-normal text-[#64748B]">Assignee:</p>
+            <p class="text-[16px] font-semibold">fahim ahmed</p>
+        </div>
+        <div>
+            <p class="text-[16px] font-normal text-[#64748B]">Priority:</p>
+            <div class="btn btn-xs btn-outline text-[#00A96E] bg-[#BBF7D0] rounded-xl">high</div>
+        </div>
+
+     </footer>
+
+      <form method="dialog" class="m-4" >
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn btn-primary absolute right-6 bottom-2  ">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
 
    <script src="./scripts/issues.js"></script>
 </body>
