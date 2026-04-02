@@ -9,31 +9,32 @@
         
         
         let card=document.createElement("div");
-        card.innerHTML=`<div class="w-[300px] h-80 bg-white p-4 space-y-4 rounded-xl shadow-xl">
-                <header class="flex items-center justify-between ">
+        card.innerHTML=`<div class="w-[300px] h-80 bg-white   rounded-xl shadow-xl flex flex-col">
+                <header class="flex items-center justify-between p-4 ">
                     <img src="./assets/${element.status}-Status.png" alt="">
                     <div class=" priority h-6 w-20  text-center rounded-2xl">${element.priority}</div>
                 </header>
-                <main class="space-y-2 ">
+                <main class="flex-1 p-4 space-y-2 ">
                     <h2 class="line-clamp-2 font-semibold text-[18px]">${element.title}</h2>
                     <p class="font-normal text-[14px] text-[#64748B] line-clamp-3">${element.description}</p>
                     <div class="flex items-center gap-2">
                   <div class="flex items-center gap-2">
-  ${element.labels.map(label => `
-    <div class="btn btn-xs btn-outline">${label}</div>
-  `).join("")}
-</div>
+             ${element.labels.map(label => `
+                <div class="btn btn-xs btn-outline text-[#00A96E] bg-[#BBF7D0] rounded-xl">${label}</div>
+             `).join("")}
+             </div>
                        
                         
                         
                         
                     </div>
-                    <hr class="border-[#64748B] -mx-2 my-3">
-                    <footer class="text-[12px] text-[#64748B] font-normal ">
+                    
+                </main>
+                <hr class="  border-[#dadbdd] ">
+                    <footer class="text-[12px] text-[#64748B] font-normal p-4 ">
                         <p>#1 by john_doe</p>
                         <p>1/15/2024</p>
                     </footer>
-                </main>
 
              </div>`;
 
