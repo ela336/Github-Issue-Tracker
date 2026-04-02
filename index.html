@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+<style>
+* {
+  font-family: "Geist", sans-serif;
+  font-style: normal;
+}
+</style>
+
+</head>
+<body >
+    <fieldset class=" container mx-auto mt-6 fieldset  shadow rounded-box w-[500px]  p-4">
+
+        <div class="text-center mx-auto " >
+            <img src="./assets/github-logo.png" class="h-[100px] w-[100px] mx-auto ">
+            <h3 class="font-semibold text-[20px]">GitHub Issues Tracker</h3>
+            <p class="text-[#64748B]">Sign in to manage your issues</p>
+        </div>
+  
+
+  <label class="label text-[16px] font-normal text-black">Username</label>
+  <input id="username" type="text" class="input w-full  font-normal" placeholder="Enter Username" />
+  <p class="text-[14px] text-[#4A00FF] mb-2">Default: admin</p>
+
+  <label class="label text-[16px] font-normal text-black">Password</label>
+  <input id="password" type="password" class="input w-full  font-normal" placeholder=" Enter Password" />
+  <p class="text-[14px] text-[#4A00FF]">Default: admin123</p>
+
+  <button  id="sign-in-btn" class="btn btn-primary rounded-btn mt-4"  onclick="signin()">Sign In</button>
+
+  <div class="flex items-center gap-2 mt-2 mb-2">
+  <hr class="grow border-gray-300">
+  <p class="whitespace-nowrap">OR</p>
+  <hr class="grow border-gray-300">
+</div>
+<p class="text-[14px] font-normal text-center text-[#64748B]">Demo Credentials:</p>
+<div class="text-[16px] text-black bg-[#f6fafe] text-center mb-2 container mx-auto p-4">
+  <p ><b>Username:</b> admin</p>
+  <p><b>Password:</b> admin123</p>
+</div>
+</fieldset>
+
+
+
+<script src="./scripts/login.js"></script>
+</body>
+</html>
