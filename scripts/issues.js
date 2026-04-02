@@ -120,6 +120,7 @@ async function searchIssues(){
              }
 
         issueContainer.appendChild(card);
+        updateissuecount();
        
         
     });
@@ -149,3 +150,11 @@ function toggleMenu(id){
 }
 
 allIssues();
+
+
+// issue count
+let issueCount=document.getElementById("issuecount");
+function updateissuecount(){
+    let count=issueContainer.children.length;
+    issueCount.textContent=`${count} Issues`;
+}
