@@ -28,7 +28,7 @@
    <header class="bg-white ">
      <div class=" w-[90%]navbar  border-b border-base-300 flex  justify-between items-center px-9 py-4">
   <div class="flex items-center ">
-    <img src="./assets/github-logo.png" class="h-[36px] w-[36px]">
+    <img src="./assets/github-logo.png" class="h-9 w-9">
     <a class="btn btn-ghost text-xl"><h3>GitHub Issues Tracker</h3></a>
   </div>
   <div class="flex gap-2">
@@ -43,9 +43,9 @@
    <main>
     <div class="bg-white container shadow mx-auto my-9 py-5 px-3 rounded-box">
         <div class="space-x-2">
-            <button id="allbtn" onclick="toggleMenu(allbtn)" class="btn btn-primary w-[120px]">All</button>
-            <button id="openbtn" onclick="toggleMenu(openbtn)" class="btn btn-outline border-[#adb5c2]  w-[120px]">Open</button>
-            <button id="closedbtn" onclick="toggleMenu(closedbtn)" class="btn btn-outline border-[#adb5c2]  w-[120px]">Closed</button>
+            <button id="allbtn" onclick="toggleMenu(allbtn);allIssues()" class="btn btn-primary w-[120px]">All</button>
+            <button id="openbtn" onclick="toggleMenu(openbtn); func('open')" class="btn btn-outline border-[#adb5c2]  w-[120px]">Open</button>
+            <button id="closedbtn" onclick="toggleMenu(closedbtn);func('closed')" class="btn btn-outline border-[#adb5c2]  w-[120px]">Closed</button>
         </div>
     </div>
 
