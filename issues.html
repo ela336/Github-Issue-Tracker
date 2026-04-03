@@ -27,12 +27,12 @@
 <body class="bg-[#f9f9fb]">
    <header class="bg-white ">
      <div class=" w-[90%]navbar  border-b border-base-300 flex  justify-between items-center px-9 py-4">
-  <div class="flex items-center ">
+  <div class="flex flex-col sm:flex-row items-center ">
     <img src="./assets/github-logo.png" class="h-9 w-9">
-    <a class="btn btn-ghost text-xl"><h3>GitHub Issues Tracker</h3></a>
+    <a class="btn btn-ghost  text-[16px] sm:text-xl"><h3>GitHub Issues Tracker</h3></a>
   </div>
-  <div class="flex gap-2">
-    <input  id="search-input" type="text" placeholder="Search issues..." class="input input-bordered w-24 md:w-auto" />
+  <div class="flex flex-col sm:flex-row gap-2  ">
+    <input  id="search-input" type="text" placeholder="Search " class="input input-bordered w-[150px]  md:w-auto" />
     <button class="btn btn-primary" onclick="searchIssues()"><i class="fa-solid fa-plus"></i> New Issue</button>
   </div>
 </div>
@@ -58,7 +58,7 @@
 
 <!-- Issue Summary -->
     <div class="shadow-xl container mx-auto">
-        <div class="bg-white container shadow mx-auto my-9 py-4 px-3 flex items-center justify-between border-b border-base-300 ">
+        <div class="bg-white container shadow mx-auto my-9 py-4 px-3 flex  items-center justify-between border-b border-base-300 ">
         <div class="flex items-center gap-4">
             <div class="bg-[#ECE4FF] h-[50px] w-[50px] rounded-[100%] flex items-center justify-center">
                 <img src="./assets/Aperture.png" alt="">
@@ -69,7 +69,7 @@
             </div>
         </div>
 
-        <div class="flex gap-4  ">
+        <div class="flex  flex-col sm:flex-row gap-4  ">
             <div class="flex items-center gap-2"><div class="bg-[#00A96E] h-[15px] w-[15px] rounded-[100%]"></div>
             <p>Open</p>
             </div>
@@ -85,7 +85,7 @@
     <!-- cart section  -->
 
     <div class="bg-[#FBFBFB] conatiner mx-auto p-4">
-        <div class=" grid grid-cols-4 gap-4" id="issue-container">
+        <div class="   grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4" id="issue-container">
             <!-- cart content -->
             <!-- cards will append dynamically -->
 

@@ -14,7 +14,7 @@
         let formattedDate = date.toLocaleDateString("en-US");
         
         let card=document.createElement("div");
-        card.innerHTML=`<div onclick="openModal(${element.id})" class="  ${element.status=='open' ? 'border-t-4 border-[#00A96E]':'border-t-4 border-[#A855F7]'} w-[300px] h-80 bg-white   rounded-xl shadow-xl flex flex-col">
+        card.innerHTML=`<div onclick="openModal(${element.id})" class="  ${element.status=='open' ? 'border-t-4 border-[#00A96E]':'border-t-4 border-[#A855F7]'} w-full h-80 bg-white   rounded-xl shadow-xl flex flex-col">
                 <header class="flex items-center justify-between p-4 ">
                     <img src="./assets/${element.status}-Status.png" alt="">
                     <div class=" priority h-6 w-20  text-center rounded-2xl">${element.priority}</div>
@@ -88,7 +88,7 @@ async function searchIssues(){
         let formattedDate = date.toLocaleDateString("en-US");
         
         let card=document.createElement("div");
-        card.innerHTML=`<div onclick="openModal(${element.id})" class= "${element.status=='open' ? 'border border-[#00A96E]':'border border-[#A855F7]'}   w-[300px] h-80 bg-white   rounded-xl shadow-xl flex flex-col">
+        card.innerHTML=`<div onclick="openModal(${element.id})" class= "${element.status=='open' ? 'border-t-4 border-[#00A96E]':'border-t-4 border-[#A855F7]'}   w-full h-80 bg-white   rounded-xl shadow-xl flex flex-col">
                 <header class="flex items-center justify-between p-4 ">
                     <img src="./assets/${element.status}-Status.png" alt="">
                     <div class=" priority h-6 w-20  text-center rounded-2xl">${element.priority}</div>
@@ -193,7 +193,7 @@ function updateissuecount(){
         let formattedDate = date.toLocaleDateString("en-US");
         
         let card=document.createElement("div");
-        card.innerHTML=`<div onclick="openModal(${element.id})" class="${iid =='open' ? 'border-t-4 border-[#00A96E]':'border-t-4 border-[#A855F7]'} w-[300px] h-80 bg-white   rounded-xl shadow-xl flex flex-col">
+        card.innerHTML=`<div onclick="openModal(${element.id})" class="${iid =='open' ? 'border-t-4 border-[#00A96E]':'border-t-4 border-[#A855F7]'} w-full h-80 bg-white   rounded-xl shadow-xl flex flex-col">
                 <header class="flex items-center justify-between p-4 ">
                     <img src="./assets/${element.status}-Status.png" alt="">
                     <div class=" priority h-6 w-20  text-center rounded-2xl">${element.priority}</div>
