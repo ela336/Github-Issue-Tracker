@@ -1,10 +1,14 @@
  let issueContainer=document.getElementById("issue-container");
- 
+ let spinner=document.getElementById("spinner");
  
  
  async function allIssues(){
+    spinner.classList.remove("hidden");
+    spinner.classList.add("flex");
     let res=await fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues ");
     let data=await res.json();
+   spinner.classList.remove("flex");
+    spinner.classList.add("hidden");
     data.data.forEach((element) => {
         let date = new Date(element.createdAt);
         let formattedDate = date.toLocaleDateString("en-US");
@@ -72,15 +76,19 @@ let searchInput=document.getElementById("search-input")
 
 async function searchIssues(){
     let query=searchInput.value.toLocaleLowerCase();
+    spinner.classList.remove("hidden");
+    spinner.classList.add("flex");
     let res=await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${query}`);
     let data=await res.json();
+    spinner.classList.remove("flex");
+    spinner.classList.add("hidden");
     issueContainer.innerHTML="";
      data.data.forEach((element) => {
         let date = new Date(element.createdAt);
         let formattedDate = date.toLocaleDateString("en-US");
         
         let card=document.createElement("div");
-        card.innerHTML=`<div class= "${element.status=='open' ? 'border border-[#00A96E]':'border border-[#A855F7]'}   w-[300px] h-80 bg-white   rounded-xl shadow-xl flex flex-col">
+        card.innerHTML=`<div onclick="openModal(${element.id})" class= "${element.status=='open' ? 'border border-[#00A96E]':'border border-[#A855F7]'}   w-[300px] h-80 bg-white   rounded-xl shadow-xl flex flex-col">
                 <header class="flex items-center justify-between p-4 ">
                     <img src="./assets/${element.status}-Status.png" alt="">
                     <div class=" priority h-6 w-20  text-center rounded-2xl">${element.priority}</div>
@@ -169,19 +177,23 @@ function updateissuecount(){
 }
 
 
-//open button functionality
+//open and closed button functionality
  async function func(iid)
  {
     issueContainer.innerHTML="";
+    spinner.classList.remove("hidden");
+    spinner.classList.add("flex");
      let res=await fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues");
     let data=await res.json();
+    spinner.classList.remove("flex");
+    spinner.classList.add("hidden");
     data.data.forEach((element) => {
         if(element.status == iid){
         let date = new Date(element.createdAt);
         let formattedDate = date.toLocaleDateString("en-US");
         
         let card=document.createElement("div");
-        card.innerHTML=`<div class="${iid =='open' ? 'border-t-4 border-[#00A96E]':'border-t-4 border-[#A855F7]'} w-[300px] h-80 bg-white   rounded-xl shadow-xl flex flex-col">
+        card.innerHTML=`<div onclick="openModal(${element.id})" class="${iid =='open' ? 'border-t-4 border-[#00A96E]':'border-t-4 border-[#A855F7]'} w-[300px] h-80 bg-white   rounded-xl shadow-xl flex flex-col">
                 <header class="flex items-center justify-between p-4 ">
                     <img src="./assets/${element.status}-Status.png" alt="">
                     <div class=" priority h-6 w-20  text-center rounded-2xl">${element.priority}</div>
