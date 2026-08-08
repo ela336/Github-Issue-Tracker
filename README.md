@@ -1,11 +1,11 @@
-<img width="1920" height="948" alt="github" src="https://github.com/user-attachments/assets/2adb3ae2-dcd3-4e9b-a074-03b581bed5ed" />
-<img width="1920" height="1080" alt="github" src="https://github.com/user-attachments/assets/584476d6-8476-4bf5-a1e0-0f7af5d18e8f" />
+
+
 # 📌 GitHub Issue Tracker
 
 <p align="center">
 
 
-  <img width="1913" height="874" alt="Screenshot 2026-07-30 201857" src="https://github.com/user-attachments/assets/a1126651-99ea-4b77-884b-63be6b82a871" />
+  <img width="1920" height="948" alt="github" src="https://github.com/user-attachments/assets/2adb3ae2-dcd3-4e9b-a074-03b581bed5ed" />
 
 </p>
 
