@@ -1,3 +1,4 @@
+<img width="1920" height="948" alt="github" src="https://github.com/user-attachments/assets/2adb3ae2-dcd3-4e9b-a074-03b581bed5ed" />
 <img width="1920" height="1080" alt="github" src="https://github.com/user-attachments/assets/584476d6-8476-4bf5-a1e0-0f7af5d18e8f" />
 # 📌 GitHub Issue Tracker
 
